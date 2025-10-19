@@ -1,6 +1,13 @@
-# Differential Drive Robot Control with PID Navigation
+## 👥 Anggota Kelompok
 
-ROS2 Humble package for differential drive robot simulation with PID-based navigation control.
+| Nama | NRP |
+|------|-----|
+| Muhammad Ammar Ghifari | 5025231109 |
+| Glenn Muhammad Rooney | 5025231112 |
+| Muhamad Baihaqi Dawanis | 5025231177 |
+| Muhammad Risyad Himawan Putra | 5025231205 |
+| Naswan Nashir Ramadhan | 5025231246 |
+| Faizal Aldy Armiriawan | 5025231266 |
 
 ## 📋 Features
 
@@ -13,7 +20,7 @@ ROS2 Humble package for differential drive robot simulation with PID-based navig
 ## 🏗️ Project Structure
 
 ```
-tugas-robotika-1/
+tugas-robotika-2/
 ├── config/              # YAML configuration files
 │   ├── pid_params.yaml
 │   ├── navigator_params.yaml
