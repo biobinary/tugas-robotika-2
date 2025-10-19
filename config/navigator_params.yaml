@@ -1,0 +1,25 @@
+/**:
+  ros__parameters:
+    # PID Gains (more conservative for waypoint navigation)
+    kp: 0.8
+    ki: 0.01
+    kd: 0.03
+    
+    # Velocity Limits
+    max_linear_vel: 0.8
+    max_angular_vel: 1.2
+    
+    # Tolerances (slightly relaxed for multi-waypoint)
+    angle_tolerance: 0.1
+    distance_tolerance: 0.5
+    final_angle_tolerance: 0.1
+    
+    # State Transition
+    transition_delay: 1.0
+    
+    # File path
+    target_file: 'data/target.txt'
+    
+    # Anti-Windup
+    integral_max: 10.0
+
