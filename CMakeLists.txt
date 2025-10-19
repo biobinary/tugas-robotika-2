@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(tugas-robotika)
+project(tugas_robotika)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -10,29 +10,25 @@ find_package(ament_cmake REQUIRED)
 find_package(ament_cmake_python REQUIRED)
 find_package(rclpy REQUIRED)
 
-# Install Python modules
-ament_python_install_package(PIDController
-  PACKAGE_DIR src/PIDController/PIDController)
-ament_python_install_package(PIDNavigator
-  PACKAGE_DIR src/PIDNavigator/PIDNavigator)
-ament_python_install_package(RobotController
-  PACKAGE_DIR src/RobotController/RobotController)
+# Install Python package
+ament_python_install_package(${PROJECT_NAME}
+  PACKAGE_DIR src/${PROJECT_NAME})
 
 # Install Python executables
 install(PROGRAMS
-  src/PIDController/PIDController/pid_controller.py
+  src/${PROJECT_NAME}/pid_controller.py
   DESTINATION lib/${PROJECT_NAME}
   RENAME pid_controller
 )
 
 install(PROGRAMS
-  src/PIDNavigator/PIDNavigator/file_handling.py
+  src/${PROJECT_NAME}/file_handling.py
   DESTINATION lib/${PROJECT_NAME}
   RENAME file_handling
 )
 
 install(PROGRAMS
-  src/RobotController/RobotController/robot_controller.py
+  src/${PROJECT_NAME}/robot_controller.py
   DESTINATION lib/${PROJECT_NAME}
   RENAME robot_controller
 )

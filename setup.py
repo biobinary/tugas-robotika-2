@@ -1,18 +1,14 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 import os
 from glob import glob
 
-package_name = 'tugas-robotika'
+package_name = 'tugas_robotika'
 
 setup(
     name=package_name,
-    version='0.0.1',
-    packages=['PIDController', 'PIDNavigator', 'RobotController'],
-    package_dir={
-        'PIDController': 'src/PIDController/PIDController',
-        'PIDNavigator': 'src/PIDNavigator/PIDNavigator',
-        'RobotController': 'src/RobotController/RobotController',
-    },
+    version='1.0.0',
+    packages=find_packages(where='src'),
+    package_dir={'': 'src'},
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
@@ -28,17 +24,14 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='itsrobocon2',
-    maintainer_email='itsrobocon2@todo.todo',
-    description='ROS2 differential drive robot control package',
-    license='TODO: License declaration',
+    description='ROS2 differential drive robot control package with PID-based navigation and multi-waypoint support',
+    license='MIT',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'robot_controller = RobotController.robot_controller:main',
-            'pid_controller = PIDController.pid_controller:main',
-            'file_handling = PIDNavigator.file_handling:main',
+            'robot_controller = tugas_robotika.robot_controller:main',
+            'pid_controller = tugas_robotika.pid_controller:main',
+            'file_handling = tugas_robotika.file_handling:main',
         ],
     },
 )
-

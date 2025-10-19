@@ -11,7 +11,7 @@ def generate_launch_description():
     """Generate launch description for robot controller."""
     
     robot_controller_node = Node(
-        package='tugas-robotika',
+        package='tugas_robotika',
         executable='robot_controller',
         name='robot_controller',
         output='screen',

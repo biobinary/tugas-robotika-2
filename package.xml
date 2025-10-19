@@ -1,16 +1,11 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>tugas-robotika</name>
+  <name>tugas_robotika</name>
   <version>1.0.0</version>
   <description>ROS2 differential drive robot control package with PID-based navigation and multi-waypoint support</description>
   <maintainer email="robotica@example.com">RoboticaLab</maintainer>
   <license>MIT</license>
-  
-  <author email="robotica@example.com">RoboticaLab</author>
-  
-  <url type="repository">https://github.com/yourusername/tugas-robotika-1</url>
-  <url type="bugtracker">https://github.com/yourusername/tugas-robotika-1/issues</url>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
   <buildtool_depend>ament_cmake_python</buildtool_depend>

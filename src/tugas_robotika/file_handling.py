@@ -100,8 +100,8 @@ class PIDNavigator(Node):
     def load_targets(self, filename):
         """Load target waypoints from file."""
         try:
-            # Get package share directory
-            package_share = get_package_share_directory('tugas-robotika')
+            # Get package share directory - update to use underscore package name
+            package_share = get_package_share_directory('tugas_robotika')
             target_path = os.path.join(package_share, filename)
             
             targets = []

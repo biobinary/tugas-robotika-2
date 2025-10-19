@@ -17,7 +17,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
     """Generate launch description for complete simulation with navigation."""
     
-    pkg_share = get_package_share_directory('tugas-robotika')
+    pkg_share = get_package_share_directory('tugas_robotika')
     
     # Paths
     default_model_path = os.path.join(pkg_share, 'description/diff_drive_description.urdf')
@@ -154,7 +154,7 @@ def generate_launch_description():
     
     # PID Controller (single target mode)
     pid_controller_node = Node(
-        package='tugas-robotika',
+        package='tugas_robotika',
         executable='pid_controller',
         name='pid_controller',
         output='screen',
@@ -172,7 +172,7 @@ def generate_launch_description():
     
     # Waypoint Navigator (multi target mode)
     navigator_node = Node(
-        package='tugas-robotika',
+        package='tugas_robotika',
         executable='file_handling',
         name='file_handling_navigator',
         output='screen',

@@ -15,7 +15,7 @@ def generate_launch_description():
     """Generate launch description for PID controller."""
     
     # Get package directory
-    pkg_share = get_package_share_directory('tugas-robotika')
+    pkg_share = get_package_share_directory('tugas_robotika')
     default_config_path = os.path.join(pkg_share, 'config', 'pid_params.yaml')
     
     # Declare launch arguments
@@ -51,7 +51,7 @@ def generate_launch_description():
     
     # PID controller node
     pid_controller_node = Node(
-        package='tugas-robotika',
+        package='tugas_robotika',
         executable='pid_controller',
         name='pid_controller',
         output='screen',
