@@ -201,10 +201,6 @@ ros2 launch tugas-robotika pid_controller.launch.py \
 
 MIT License - see LICENSE file for details.
 
-## 👥 Authors
-
-- RoboticaLab - Tugas Robotika 1
-
 ## 🙏 Acknowledgments
 
 - ROS2 Humble Documentation
