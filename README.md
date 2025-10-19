@@ -54,7 +54,7 @@ rosdep install --from-paths src --ignore-src -r -y
 ### Build Package
 
 ```bash
-cd ~/ros_projects/tugas-robotika-1
+cd ~/ros_projects/tugas-robotika-2
 colcon build --symlink-install
 source install/setup.bash
 ```
