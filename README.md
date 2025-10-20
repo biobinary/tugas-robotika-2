@@ -1,13 +1,15 @@
-## 👥 Anggota Kelompok
+# ROS 2 Assignment 1
 
-| Nama | NRP |
-|------|-----|
-| Muhammad Ammar Ghifari | 5025231109 |
-| Glenn Muhammad Rooney | 5025231112 |
-| Muhamad Baihaqi Dawanis | 5025231177 |
+## 👥 Team Members
+
+| Nama                          | NRP        |
+| ----------------------------- | ---------- |
+| Muhammad Ammar Ghifari        | 5025231109 |
+| Glenn Muhammad Rooney         | 5025231112 |
+| Muhamad Baihaqi Dawanis       | 5025231177 |
 | Muhammad Risyad Himawan Putra | 5025231205 |
-| Naswan Nashir Ramadhan | 5025231246 |
-| Faizal Aldy Armiriawan | 5025231266 |
+| Naswan Nashir Ramadhan        | 5025231246 |
+| Faizal Aldy Armiriawan        | 5025231266 |
 
 ## 📋 Features
 
@@ -105,6 +107,7 @@ ros2 launch tugas-robotika file_handling.launch.py \
 ```
 
 **Waypoint File Format:**
+
 ```
 # target_x  target_y  target_yaw
 1  2.0  3.0  0.0
@@ -121,6 +124,7 @@ ros2 launch tugas-robotika robot_controller.launch.py
 ```
 
 **Keyboard Controls:**
+
 ```
    u    i    o       Movement:
    j    k    l       u/i/o: Forward left/straight/right
@@ -145,16 +149,16 @@ Edit `config/pid_params.yaml` or `config/navigator_params.yaml`:
     kp: 1.0              # Proportional gain
     ki: 0.1              # Integral gain
     kd: 0.05             # Derivative gain
-    
+  
     # Velocity Limits
     max_linear_vel: 0.8
     max_angular_vel: 1.5
-    
+  
     # Tolerances
     angle_tolerance: 0.05         # radians
     distance_tolerance: 0.5       # meters
     final_angle_tolerance: 0.1    # radians
-    
+  
     # State Transition
     transition_delay: 1.0         # seconds
 ```
@@ -174,6 +178,7 @@ ros2 launch tugas-robotika pid_controller.launch.py \
 - **Wheel Separation**: 0.36m
 
 **Sensors:**
+
 - LiDAR: 180° FOV, 20m range
 - IMU: 100Hz update rate
 - Depth Camera: 640×480, 30Hz
@@ -181,28 +186,31 @@ ros2 launch tugas-robotika pid_controller.launch.py \
 ## 🐛 Troubleshooting
 
 ### Robot doesn't move
+
 - Check if `use_sim_time` is properly set
 - Verify cmd_vel topic: `ros2 topic echo /cmd_vel`
 - Check Gazebo bridge: `ros2 topic list | grep cmd_vel`
 
 ### Navigation overshoots target
+
 - Decrease PID gains (especially `kp`)
 - Increase `distance_tolerance`
 - Check for wheel slippage (adjust friction in URDF)
 
 ### Angle wrap-around issues
+
 - Ensure using latest version with normalized angle fixes
 - Check `angle_tolerance` values
 
 ## 📊 Topics
 
-| Topic | Type | Description |
-|-------|------|-------------|
-| `/cmd_vel` | `geometry_msgs/Twist` | Velocity commands |
-| `/odom` | `nav_msgs/Odometry` | Odometry data |
-| `/scan` | `sensor_msgs/LaserScan` | LiDAR data |
-| `/imu` | `sensor_msgs/Imu` | IMU data |
-| `/tf` | `tf2_msgs/TFMessage` | Transform tree |
+| Topic        | Type                      | Description       |
+| ------------ | ------------------------- | ----------------- |
+| `/cmd_vel` | `geometry_msgs/Twist`   | Velocity commands |
+| `/odom`    | `nav_msgs/Odometry`     | Odometry data     |
+| `/scan`    | `sensor_msgs/LaserScan` | LiDAR data        |
+| `/imu`     | `sensor_msgs/Imu`       | IMU data          |
+| `/tf`      | `tf2_msgs/TFMessage`    | Transform tree    |
 
 ## 📝 License
 
