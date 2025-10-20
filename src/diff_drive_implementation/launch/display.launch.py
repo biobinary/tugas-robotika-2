@@ -14,7 +14,7 @@ from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
-    pkg_share = get_package_share_directory('tugas_robotika')
+    pkg_share = get_package_share_directory('diff_drive_implementation')
     default_model_path = os.path.join(pkg_share, 'description/diff_drive_description.urdf')
     default_rviz_config_path = os.path.join(pkg_share, 'rviz/navigation.rviz')
     world_path=os.path.join(pkg_share, 'worlds/my_world.sdf')

@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import os
 from glob import glob
 
-package_name = 'tugas_robotika'
+package_name = 'diff_drive_implementation'
 
 setup(
     name=package_name,
@@ -29,9 +29,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'robot_controller = tugas_robotika.robot_controller:main',
-            'pid_controller = tugas_robotika.pid_controller:main',
-            'file_handling = tugas_robotika.file_handling:main',
+            'robot_controller = diff_drive_implementation.robot_controller:main',
+            'pid_controller = diff_drive_implementation.pid_controller:main',
+            'file_handling = diff_drive_implementation.file_handling:main',
         ],
     },
 )

@@ -38,7 +38,7 @@ tugas-robotika-2/
 ├── models/              # Gazebo models
 ├── rviz/                # RViz configurations
 ├── src/                 # Python source code
-│   └── tugas_robotika/
+│   └── diff_drive_implementation/
 │       ├── __init__.py
 │       ├── pid_controller.py
 │       ├── file_handling.py
@@ -77,7 +77,7 @@ source install/setup.bash
 Start Gazebo, RViz, and robot localization:
 
 ```bash
-ros2 launch tugas_robotika display.launch.py
+ros2 launch diff_drive_implementation display.launch.py
 ```
 
 ### 2. Navigation Modes
@@ -88,10 +88,10 @@ Navigate to a single target position with specific orientation:
 
 ```bash
 # Default target (x=3.0, y=4.0, yaw=-1.56)
-ros2 launch tugas_robotika pid_controller.launch.py
+ros2 launch diff_drive_implementation pid_controller.launch.py
 
 # Custom target
-ros2 launch tugas_robotika pid_controller.launch.py \
+ros2 launch diff_drive_implementation pid_controller.launch.py \
     target_x:=5.0 target_y:=3.0 target_yaw:=1.57
 ```
 
@@ -101,10 +101,10 @@ Navigate through multiple waypoints from a file:
 
 ```bash
 # Default waypoints (data/target.txt)
-ros2 launch tugas_robotika file_handling.launch.py
+ros2 launch diff_drive_implementation file_handling.launch.py
 
 # Custom waypoint file
-ros2 launch tugas_robotika file_handling.launch.py \
+ros2 launch diff_drive_implementation file_handling.launch.py \
     target_file:=data/my_waypoints.txt
 ```
 
@@ -122,7 +122,7 @@ ros2 launch tugas_robotika file_handling.launch.py \
 Control the robot manually using keyboard:
 
 ```bash
-ros2 launch tugas_robotika robot_controller.launch.py
+ros2 launch diff_drive_implementation robot_controller.launch.py
 ```
 
 **Keyboard Controls:**
@@ -168,7 +168,7 @@ Edit `config/pid_params.yaml` or `config/navigator_params.yaml`:
 ### Custom Configuration File
 
 ```bash
-ros2 launch tugas_robotika pid_controller.launch.py \
+ros2 launch diff_drive_implementation pid_controller.launch.py \
     config_file:=/path/to/custom_config.yaml
 ```
 

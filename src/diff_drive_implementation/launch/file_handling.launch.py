@@ -15,7 +15,7 @@ def generate_launch_description():
     """Generate launch description for file handling navigator."""
     
     # Get package directory
-    pkg_share = get_package_share_directory('tugas_robotika')
+    pkg_share = get_package_share_directory('diff_drive_implementation')
     default_config_path = os.path.join(pkg_share, 'config', 'navigator_params.yaml')
     
     # Declare launch arguments
@@ -39,7 +39,7 @@ def generate_launch_description():
     
     # File handling navigator node
     file_handling_node = Node(
-        package='tugas_robotika',
+        package='diff_drive_implementation',
         executable='file_handling',
         name='file_handling_navigator',
         output='screen',
