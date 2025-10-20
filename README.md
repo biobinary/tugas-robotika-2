@@ -2,7 +2,7 @@
 
 ## 👥 Team Members
 
-| Nama                          | NRP        |
+| Name                          | NRP        |
 | ----------------------------- | ---------- |
 | Muhammad Ammar Ghifari        | 5025231109 |
 | Glenn Muhammad Rooney         | 5025231112 |
