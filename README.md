@@ -65,7 +65,7 @@ rosdep install --from-paths src --ignore-src -r -y
 ### Build Package
 
 ```bash
-cd src/diff_drive_implementation/data
+cd src/diff_drive_implementation
 colcon build --symlink-install
 source install/setup.bash
 ```
